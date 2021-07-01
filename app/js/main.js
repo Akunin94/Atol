@@ -21,11 +21,6 @@ $(window).on('scroll', function(){
 // MENU TOP -----
 
 
-// SEARCH BLOCK +++++
-
-// SEARCH BLOCK -----
-
-
 // POPUP FORM +++++
 $(document).on('keydown', function(event){
     if (event.which == 27) {
@@ -95,7 +90,7 @@ $(document).on('click', '.faq__item.active .title', function(){
 $(document).on('click', '.faq__all', function(){
 	var $this = $(this);
 
-	$this.siblings().addClass('show');
+	$this.prev().find('.faq__item').addClass('show');
 	$this.slideUp();
 });
 // FAQ -----
@@ -111,5 +106,14 @@ if (localStorage.getItem('cookiehide')) {
 	$('.cookie-block').hide();
 }
 // COOKIE BLOCK -----
+
+
+// INPUT MASK +++++
+$(function(){
+	$('.maskme').each(function(){
+		$(this).mask("+7 (999) 999-99-99");
+	});
+});
+// INPUT MASK -----
 
 })(jQuery)
