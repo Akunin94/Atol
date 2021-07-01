@@ -162,7 +162,7 @@ header {
 		background: #fff;
 		z-index: 10;
 		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-		.login a {
+		.login a, .phones div+div:before {
 			color: #000;
 		}
 		.burger {
@@ -214,6 +214,7 @@ header {
 						line-height: 24px;
 						text-decoration: none;
 						color: #000;
+						transition: 0.2s;
 						&:hover {
 							color: #ff0d22;
 						}
@@ -457,7 +458,7 @@ header {
 				font-size: 14px;
 				line-height: 1;
 	    		&:focus {
-	    			border-color: #4676F2;
+	    			border-color: #000;
 	    		}
 	    	}
 			label.checkbox {
@@ -504,7 +505,7 @@ header {
 			border: none;
 			outline: none;
 			cursor: pointer;
-			background: linear-gradient(95.93deg, #EC1B30 14.49%, #4676F2 96.26%);
+			background: linear-gradient(90deg, #EC1B30, #4676F2);
 			padding: 22px 5px 23px;
 			border-radius: 49px;
 			color: #fff;
@@ -513,8 +514,7 @@ header {
 			line-height: 1;
 			margin-top: 19px;
 			&:hover {
-				color: #086ad8;
-				background: none;
+				background: #ff0d22;
 			}
 		}
 	}
@@ -1124,7 +1124,7 @@ header {
 		a.link {
 			display: inline-block;
 			vertical-align: top;
-			background: linear-gradient(95.93deg, #EC1B30, #4676F2);
+			background: linear-gradient(90deg, #EC1B30, #4676F2);
 			border-radius: 49px;
 			font-size: 16px;
 			font-weight: 700;
@@ -1135,7 +1135,7 @@ header {
 			color: #fff;
 			text-decoration: none;
 			&:hover {
-				text-decoration: underline;
+				background: #ff0d22;
 			}
 		}
 	}
@@ -1357,6 +1357,7 @@ header {
 			display: none;
 		}
 		.title {
+			cursor: pointer;
 			&:before {
 				position: absolute;
 				top: 50%;
@@ -1462,7 +1463,7 @@ header {
 				line-height: 1;		
 				color: #000;		
 	    		&:focus {
-	    			border-color: #4676F2;
+	    			border-color: #000;
 	    		}
 				&::placeholder {
 					color: #000;
@@ -1481,8 +1482,9 @@ header {
 			text-align: center;
 			border-radius: 49px;
 			width: 100%;
+			cursor: pointer;
 			&:hover {
-				text-decoration: underline;
+				background: #ff0d22;
 			}
 		}
 	}
@@ -1505,6 +1507,11 @@ header {
 		font-weight: 700;
 		line-height: 20px;
 		cursor: pointer;
+		transition: 0.2s;
+		border-radius: 20px;
+		&:hover {
+			background: #ff0d22;
+		}
 	}
 }
 .footer {
@@ -1539,7 +1546,11 @@ header {
 					font-weight: 400;
 					line-height: 20px;
 					margin-bottom: 8px;
+					transition: 0.2s;
 					color: #fff;
+					&:hover {
+						color: #ff0d22;
+					}
 				}
 			}
 		}
@@ -1550,6 +1561,13 @@ header {
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 25px;
+		.brr {
+			margin-top: 10px;
+			&:first-child {
+				max-width: 180px;
+				line-height: 2;
+			}
+		}
 		.phone {
 			flex-grow: 1;
 			a {
@@ -1574,7 +1592,7 @@ header {
 				padding: 15px 5px;
 				min-width: 90px;
 				&:hover {
-					text-decoration: underline;
+					background: #ff0d22;
 				}
 			}
 		}
@@ -2359,13 +2377,6 @@ header {
 		min-width: 460px;
 		max-width: 460px;
 		justify-content: flex-start;
-		.brr {
-			margin-top: 10px;
-			&:first-child {
-				max-width: 180px;
-				line-height: 2;
-			}
-		}
 	}
 	.footer__text {
 		max-width: none;
@@ -2507,7 +2518,7 @@ header {
 	.partners__item.partner7 {
 		width: 125px;
 		height: 125px;
-		right: 0;
+		right: 1.5%;
 		top: 0;
 	}
 	.partners__item.partner8 {
@@ -2708,12 +2719,41 @@ header {
 
 @media all and (min-width: 1580px) {
 	.header-top .menu-top__inner ul li a {
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
 
 @media all and (min-width: 1900px) {
+	.form-block__block {
+		padding: 45px 41px 44px 32px;
+	}
+	.steps__item .text {
+		margin-bottom: 0;
+	}
+	.steps__item:nth-child(odd):before {
+		margin-top: -2px;
+	}
+	.steps__item .icon img {
+		max-width: 86px;
+	}
+	.steps__blocks {
+		padding-right: 80px;
+	}
+	.steps__item {
+		padding-top: 22px;
+		padding-bottom: 22px;
+	}
+	.quadruple-block .top .left {
+		padding-right: 0;
+	}
+	.advantages {
+		padding-right: 200px;
+		padding-bottom: 100px;
+	}
+	.advantages__title {
+		margin-right: -200px;
+	}
 	.cookie-block {
 		padding-left: 225px;
 		padding-right: 225px;
@@ -2725,13 +2765,18 @@ header {
 		padding-right: 225px;
 	}
 	.faq__item {
-		margin-bottom: 17px;
+		margin-bottom: 19px;
+	}
+	.faq__item .title:before {
+		right: 37px;
+		margin-top: -13px;
 	}
 	.reviews {
 		margin-bottom: 130px;
 	}
 	.faq__right .list {
-		max-height: 568px;
+		max-height: 548px;
+		padding-left: 68px;
 	}
 	.faq__left {
 		max-width: 820px;
@@ -2779,6 +2824,13 @@ header {
 	}
 	.double-block__bottom {
 		max-width: 821px;
+		padding: 94px 200px 100px 128px;
+	}
+	.double-block__bottom .title {
+		max-width: 380px;
+	}
+	.double-block {
+		margin-bottom: 120px;
 	}
 	.partners {
 		padding-right: 200px;
@@ -2787,8 +2839,8 @@ header {
 		padding-left: 200px;
 	}
 	.header-top {
-		padding-left: 180px;
-		padding-right: 180px;
+		padding-left: 225px;
+		padding-right: 225px;
 	}
 	.header-button {
 		width: 94px;
@@ -2814,9 +2866,25 @@ header {
 	}
 	.quadruple-block .top .left .title {
 		margin-bottom: 51px;
+		margin-right: -20px;
+		letter-spacing: -0.5px;
+	}
+	.quadruple-block .top .left .item:before {
+		margin-top: -27px;
 	}
 	.quadruple-block .top .left .item {
-		margin-bottom: 15px;
+		margin-bottom: 2px;
+	}
+	.quadruple-block .bottom .left .note {
+		padding-top: 22px;
+		padding-bottom: 22px;
+	}
+	.integration__title {
+		max-width: 900px;
+	}
+	.integration__left {
+		padding-top: 50px;
+		padding-left: 46px;
 	}
 	.quadruple-block__inner {
 		background-position: right 14% bottom 48px;
@@ -2825,7 +2893,28 @@ header {
 		padding-left: 225px;
 	}
 	.experience__left {
-		max-width: 42%;
+		max-width: 45%;
+	}
+	.reviews {
+		padding-left: 225px;
+		padding-right: 225px;
+	}
+	.reviews__title {
+		min-width: 350px;
+	}
+	.reviews__list .item {
+		letter-spacing: -0.3px;
+		padding-right: 30px;
+	}
+	.reviews__inner {
+		padding-bottom: 2px;
+	}
+	noindex .faq__title {
+		padding-top: 20px;
+		margin-left: 68px;
+	}
+	.reviews__list {
+		margin-right: -30px;
 	}
 	.experience__right:before {
 		left: -80px;
@@ -2849,8 +2938,8 @@ header {
 		padding-right: 225px;
 	}
 	.footer__contacts {
-		min-width: 520px;
-		max-width: 520px;
+		min-width: 480px;
+		max-width: 480px;
 	}
 	.footer__text {
 		flex-grow: 1;
@@ -2860,11 +2949,27 @@ header {
 		max-width: 220px;
 	}
 	.footer__menu {
-		min-width: 370px;
-		max-width: 370px;
-		padding-right: 40px;
+		min-width: 410px;
+		max-width: 410px;
+		padding-right: 80px;
 	}
 	.footer__text {
 		padding-left: 50px;
+	}
+	.header-top {
+		padding-top: 24px;
+		padding-bottom: 24px;
+		transition: 0.2s;
+	}
+	.header-top.fixed_menu {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.header-slider .owl-dots button {
+		width: 14px;
+		height: 14px;
+	}
+	.header-wrap {
+		margin-bottom: 109px;
 	}
 }
