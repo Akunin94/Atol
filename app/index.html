@@ -1,29 +1,595 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body> 
-    <div class="site-wrapper">
-      <header>
-        <div class="header-top">
-          <a href="/" class="logo">
-            <img src="images/logo.svg" alt="АТОЛ">
-          </a>
-          <div class="login">
-            <a href="https://online.atol.ru/lk/Account/Login?returnUrl=%2Flk%2F%3Fao_header_reg">Войти</a>
-          </div>
-          <div class="menu-top">
-            
-          </div>
-        </div>
-      </header>
-    </div>
-    <footer>footer</footer>
-    <script src="js/main.min.js"> </script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body> 
+	<div class="site-wrapper">
+		<div class="header-wrap">
+			<header>
+				<div class="header-top">
+					<a href="/" class="logo">
+						<img src="images/logo.svg" alt="АТОЛ">
+					</a>
+					<div class="login">
+						<a href="https://online.atol.ru/lk/Account/Login?returnUrl=%2Flk%2F%3Fao_header_reg">Войти</a>
+					</div>
+					<div class="menu-top">
+						<div class="burger">&nbsp;</div>
+						<div class="menu-top__inner">
+							<ul>
+								<li>
+									<a href="https://online.atol.ru/ecom">Интернет-магазины</a>
+								</li>
+								<li>
+									<a href="https://taxi.atol.ru">Такси</a>
+								</li>
+								<li>
+									<a href="https://delivery.atol.ru">Курьеры</a>
+								</li>
+								<li>
+									<a href="https://transport.atol.ru">Транспорт</a>
+								</li>
+								<li>
+									<a href="https://zkh.atol.ru">ЖКХ Цены</a>
+								</li>
+								<li>
+									<a href="https://online.atol.ru/#dop">Поддержка</a>
+								</li>
+							</ul>
+							<form action="/" class="search">
+								<input type="text" placeholder="Найти" required>
+								<button type="reset"></button>
+								<button type="submit">Поиск</button>
+							</form>
+							<div class="phones">
+								<div>
+									<a href="tel:8005054747">800 505 47 47</a>
+								</div>
+								<div>
+									<a href="tel:88001375666">8 (800) 137-56-66</a>
+								</div>
+								<div>
+									<a href="tel:74951375666">+7 (495) 137-56-66</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-text">
+					<div class="subtitle">Облачные</div>
+					<div class="title">ОНЛАЙН КАССЫ</div>
+					<div class="bottom">
+						<div class="left">
+							<img src="images/logo_big.svg" alt="АТОЛ">
+						</div>
+						<div class="right">от <strong>1490 ₽</strong></div>
+					</div>
+				</div>
+				<div class="header-note">
+					<div class="title">Более 30 000 компаний выдают клиентам чеки АТОЛ Онлайн</div>
+					<div class="body"><strong>Подберем оптимальное решение</strong> для любых целей, качественно внедрим, быстро ответим на любые вопросы</div>
+				</div>
+				<div class="header-button">Оставьте заявку</div>
+			</header>
+			<div class="header-slider">
+				<div class="owl-carousel">
+					<div class="header-slider__item">
+						<div class="icon">
+							<img src="images/header-slider_icon1.svg" alt="">
+						</div>
+						<div class="right">
+							<div class="title">Первые на рынке  облачных касс в России</div>
+							<div class="body">Мы начали внедрять облачные кассы первыми в России, за 5 лет работы накопили самый большой опыт на рынке </div>
+						</div>
+					</div>
+					<div class="header-slider__item">
+						<div class="icon">
+							<img src="images/header-slider_icon2.svg" alt="">
+						</div>
+						<div class="right">
+							<div class="title">Удобный сервис</div>
+							<div class="body">Полный набор интеграций и подключений, оперативная техподдержка, своевременное обновление в соответствии с законодательством РФ</div>
+						</div>
+					</div>
+					<div class="header-slider__item">
+						<div class="icon">
+							<img src="images/header-slider_icon3.svg" alt="">
+						</div>
+						<div class="right">
+							<div class="title">Выгодно</div>
+							<div class="body">Вы получаете доступ к облачному сервису АТОЛ без накруток и комиссий.</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- .header-wrap -->
+		<div class="advantages">
+			<div class="advantages__inner">
+				<div class="advantages__title">
+					<div class="title">ПОЧЕМУ</div>
+					<div class="subtitle">с Атол Онлайн сотрудничает <strong>более 30 000</strong> предприятий</div>
+					<div class="bg">&nbsp;</div>
+				</div>
+				<div class="advantages__list">
+					<a href="#" class="advantages__item">
+						<div class="top">
+							<div class="icon">
+								<img src="images/advantages_icon1.svg" alt="">
+							</div>
+							<div class="title">Онлайн кассы и фискальные накопители</div>
+						</div>
+						<div class="body">
+							Внедряем собственный продукт компании «АТОЛ Онлайн» – свой штат разработчиков, техническая поддержка.
+						</div>
+					</a>
+					<a href="#" class="advantages__item">
+						<div class="top">
+							<div class="icon">
+								<img src="images/advantages_icon2.svg" alt="">
+							</div>
+							<div class="title">Личный кабинет</div>
+						</div>
+						<div class="body">
+							Создаем личный кабинет каждому клиенту. Контроль за выдачей чеков и передачей данных в ФНС онлайн.
+						</div>
+					</a>
+					<a href="#" class="advantages__item">
+						<div class="top">
+							<div class="icon">
+								<img src="images/advantages_icon3.svg" alt="">
+							</div>
+							<div class="title">Быстрый старт</div>
+						</div>
+						<div class="body">
+							Подключаем/настраиваем оборудование, помогаем зарегистрировать кассу в налоговой, и подключить к ОФД. Обеспечиваем техническую поддержку после внедрения 24/7
+						</div>
+					</a>
+					<a href="#" class="advantages__item">
+						<div class="top">
+							<div class="icon">
+								<img src="images/advantages_icon4.svg" alt="">
+							</div>
+							<div class="title">Интеграция с платформами и сервисами</div>
+						</div>
+						<div class="body">
+							Интегрируем с CMS, сервисами и популярными платежными системами
+						</div>
+					</a>
+					<a href="#" class="advantages__item">
+						<div class="top">
+							<div class="icon">
+								<img src="images/advantages_icon5.svg" alt="">
+							</div>
+							<div class="title">Поддержка работоспособности</div>
+						</div>
+						<div class="body">
+							Держим под контролем работу системы круглосуточно без выходных, перерывов и отпусков
+						</div>
+					</a>
+				</div>
+			</div>
+		</div><!-- .advantages -->
+		<div class="double-block">
+			<div class="double-block__top">
+				<div class="maintitle">Кому нужна <img src="images/icon1.svg" alt=""> <img src="images/icon2.svg" alt=""> облачная <img src="images/icon3.svg" alt=""> <img src="images/icon4.svg" alt=""> онлайн касса? </div>
+				<div class="double-block__top--list">
+					<div class="double-block__top--item">
+						<div class="title">E-commerce</div>
+						<div class="body">Все виды торговли в интернете</div>
+					</div>
+					<div class="double-block__top--item">
+						<div class="title">ЖКХ</div>
+						<div class="body">Фискальный учет безналичных коммунальных платежей</div>
+					</div>
+					<div class="double-block__top--item">
+						<div class="title">Перевозки и курьеры </div>
+						<div class="body">Общественный транспорт, такси, платежи курьерам</div>
+					</div>
+					<div class="double-block__top--item">
+						<div class="title">Опт и производство</div>
+						<div class="body">Учет безналичных платежей</div>
+					</div>
+					<div class="double-block__top--item">
+						<div class="title">Вендинговые операторы</div>
+						<div class="body">Торговля с использованием вендинговых аппаратов</div>
+					</div>
+					<div class="double-block__top--item">
+						<div class="title">HoReCa</div>
+						<div class="body">Безналичная оплата заказов для предприятий общественного питания</div>
+					</div>
+				</div>
+			</div>
+			<div class="double-block__bottom">
+				<div class="title">Кому <img src="images/icon5.svg" alt=""> нужна облачная онлайн касса?</div>
+				<div class="body">В розничные магазины стоит установить стационарные кассы, так как согласно закона 54-ФЗ,выдавать электронный чек можно тогда, когда нет возможности распечатать бумажный, а в розничном магазине эта возможность есть. В остальных случаях на помощь придет облачная касса АТОЛ.</div>
+			</div>
+		</div>  <!-- .double-block -->
+		<div class="partners">
+			<div class="partners__inner">
+				<div class="mainblock">
+					<div class="title">КТО</div>
+					<div class="body">Уже используют облачную онлайн кассу Атол</div>
+				</div>
+				<div class="partners__item partner1">
+					<img src="images/partner1.svg" alt="">
+				</div>
+				<div class="partners__item partner2">
+					<img src="images/partner2.svg" alt="">
+				</div>
+				<div class="partners__item partner3">
+					<img src="images/partner3.svg" alt="">
+				</div>
+				<div class="partners__item partner4">
+					<img src="images/partner4.svg" alt="">
+				</div>
+				<div class="partners__item partner5">
+					<img src="images/partner5.svg" alt="">
+				</div>
+				<div class="partners__item partner6">
+					<img src="images/partner6.svg" alt="">
+				</div>
+				<div class="partners__item partner7">
+					<img src="images/partner7.svg" alt="">
+				</div>
+				<div class="partners__item partner8">
+					<img src="images/partner8.svg" alt="">
+				</div>
+				<div class="partners__item partner9">
+					<img src="images/partner9.svg" alt="">
+				</div>
+			</div>
+		</div> <!-- .partners -->
+		<div class="steps">
+			<div class="steps__title">
+				<div class="left">КАК</div>
+				<div class="right">работает облачная касса АТОЛ?</div>
+			</div>
+			<div class="steps__inner">
+				<div class="steps__image">
+					<img src="images/faq_image.jpg" alt="">
+				</div>
+				<div class="steps__blocks">
+					<div class="steps__item">
+						<div class="text">Клиент оплачивает товар/услугу на сайте или курьеру без использования физической кассы и печати бумажного чека</div>
+						<div class="icon">
+							<img src="images/step1.svg" alt="">
+						</div>
+					</div>
+					<div class="steps__item">
+						<div class="text">Данные о платеже поступают на онлайн-кассу АТОЛ</div>
+						<div class="icon">
+							<img src="images/step2.svg" alt="">
+						</div>
+					</div>
+					<div class="steps__item">
+						<div class="text">АТОЛ передает платежные данные в ОФД, а оператор уведомляет налоговую службу</div>
+						<div class="icon">
+							<img src="images/step3.svg" alt="">
+						</div>
+					</div>
+					<div class="steps__item">
+						<div class="text">Клиент получает чек на телефон или e-mail</div>
+						<div class="icon">
+							<img src="images/step4.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- .steps -->
+		<div class="quadruple-block">
+			<div class="quadruple-block__inner">
+				<div class="top">
+					<div class="left">
+						<div class="title">Техническая реализация</div>
+						<div class="list">
+							<div class="item">ЦОД международной сертификации TIER 3 с поддержанием микроклимата и резервным электропитанием. </div>
+							<div class="item">Фирменное оборудование ведущих брендов - работает без сбоев и ремонтов;</div>
+							<div class="item">Надежная система безопасности, данные невозможно потерять, украсть или изменить без ведома клиента;</div>
+							<div class="item">Гарантированное оформление и отправка чека в момент покупки вне зависимости от нагрузки на все кассы.</div>
+						</div>
+					</div>
+					<div class="right">
+						<img src="images/quadruple-block-image.jpg" alt="">
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="left">
+						<div class="titles">
+							<div class="title">КАК</div>
+							<div class="subtitle">подключить?</div>
+						</div>
+						<div class="note">Узнайте подойдет ли вашему бизнесу облачная онлайн-касса, подключите и принимайте первые платежи.</div>
+						<div class="list">
+							<div class="item">Нажмите кнопку <strong>«Подключить»</strong></div>
+							<div class="item"><strong>Выберите сферу,</strong> в которой работает бизнес</div>
+							<div class="item"><strong>Сервис сообщит,</strong> подходит ли облачная онлайн-касса. Если подходит, предложит зарегистрироваться</div>
+							<div class="item">ведите свои данные и <strong>зарегистрируйтесь в системе</strong></div>
+							<div class="item">Перейдите в личный кабинет и <strong>подключите онлайн-кассу</strong></div>
+						</div>
+					</div>
+					<div class="right">
+						<div class="img">
+							<img src="images/phone.png" alt="">
+							<a href="/">Подключиться</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- .quadruple-block -->
+		<div class="integration">
+			<div class="integration__title">Интеграция с платформами и сервисами</div>
+			<div class="integration__inner">
+				<div class="integration__left">
+					<div class="title">Готовый платежный модуль</div>
+					<div class="note">Работает с 35 популярными СМS</div>
+					<div class="list">
+						<div class="item">
+							<img src="images/cms1.png" alt="">
+						</div>
+						<div class="item">
+							<img src="images/cms2.png" alt="">
+						</div>
+						<div class="item">
+							<img src="images/cms3.png" alt="">
+						</div>
+						<div class="item">
+							<img src="images/cms4.png" alt="">
+						</div>
+						<div class="item">
+							<img src="images/cms5.png" alt="">
+						</div>
+						<div class="item">
+							<img src="images/cms6.png" alt="">
+						</div>
+					</div>
+					<a href="/" class="link">Посмотреть все</a>
+				</div>
+				<div class="integration__right">
+					<div class="title">Полноценный API</div>
+					<div class="note">Автоматизируйте работу с платежами и узнавайте об их статусе</div>
+					<a href="/" class="link">Подключиться</a>
+				</div>
+			</div>
+		</div> <!-- .integration -->
+		<div class="experience">
+			<div class="experience__inner">
+				<div class="experience__left">
+					<div class="experience__title">Для вас весь наш опыт </div>
+					<div class="list">
+						<div class="item">
+							<div class="title">19 лет</div>
+							<div class="note">разработки, производства и дистрибуции оборудования и ПО</div>
+						</div>
+						<div class="item">
+							<div class="title">5 лет</div>
+							<div class="note">разработки и внедрения облачных касс	</div>
+						</div>
+					</div>
+				</div>
+				<div class="experience__right">
+					<div class="top">
+						<div class="item">
+							<div class="dot">&nbsp;</div>
+							<div class="number">250</div>
+						</div>
+						<div class="item active">
+							<div class="dot">&nbsp;</div>
+							<div class="number">1 000 000</div>
+						</div>
+						<div class="item">
+							<div class="dot">&nbsp;</div>
+							<div class="number">2 000</div>
+						</div>
+						<div class="item">
+							<div class="dot">&nbsp;</div>
+							<div class="number">1 200 000</div>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item">городов</div>
+						<div class="item active">предприятий используют продукты компании</div>
+						<div class="item">активных партнеров</div>
+						<div class="item">единиц фискальной техники произведено</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- .experience -->
+		<div class="reviews">
+			<div class="reviews__inner">
+				<div class="reviews__title">СМИ о нас</div>
+				<div class="reviews__list">
+					<div class="item"><strong>Компания АТОЛ получила премию «Инновация года 2018»</strong> в номинации «Бизнес для бизнеса» от издания CNews за сервис АТОЛ Онлайн – первое на российском рынке решение по аренде онлайн-касс для интернет-продавцов.</div>
+					<div class="item"><strong>2 место в рейтинге «Крупнейшие поставщики ИТ для ритейла 2019»</strong> по данным агентства CNews Analytics</div>
+					<div class="item"><strong>25 место в рейтинге «Крупнейшие ИТ-компании</strong> России 2018» по данным аналитического агенства CNews Analytics</div>
+				</div>
+			</div>
+		</div> <!-- .reviews -->
+		<div class="faq">
+			<div class="faq__title">Частые <img src="images/icon6.svg" alt=""> вопросы <img src="images/icon7.svg" alt=""> <img src="images/icon8.svg" alt=""></div>
+			<div class="faq__inner">
+				<div class="faq__left">
+					<img src="images/faq_image1.jpg" alt="">
+				</div>
+				<div class="faq__right">
+					<div class="faq__item">
+						<div class="title">Насколько удобен для “чайника” ваш личный кабинет?</div>
+						<div class="body">Очень удобен</div>
+					</div>
+					<div class="faq__item">
+						<div class="title">Для использования облачной кассы оплаты только картами должны производиться  или с наличными тоже можно работать? </div>
+						<div class="body"><a href="/">Lorem ipsum dolor</a> sit amet consectetur adipisicing elit. Quasi provident facere ducimus rerum cupiditate enim mollitia obcaecati molestias doloribus exercitationem totam, quis sapiente quod deserunt optio. Officiis nam aut quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi provident facere ducimus rerum cupiditate enim mollitia obcaecati molestias doloribus exercitationem totam, quis sapiente quod deserunt optio. Officiis nam aut quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi provident facere ducimus rerum cupiditate enim mollitia obcaecati molestias doloribus exercitationem totam, quis sapiente quod deserunt optio. Officiis nam aut quo.</div>
+					</div>
+					<div class="faq__item">
+						<div class="title">Подходит ли сервис АТОЛ Онлайн для организаций, у которых будет удержание денег из зарплаты сотрудникам?</div>
+						<div class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi provident facere ducimus rerum cupiditate enim mollitia obcaecati molestias doloribus exercitationem totam, quis sapiente quod deserunt optio. Officiis nam aut quo.</div>
+					</div>
+					<div class="faq__item">
+						<div class="title">Подходит ли сервис АТОЛ Онлайн для организаций, у которых будет удержание денег из зарплаты сотрудникам?</div>
+						<div class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi provident facere ducimus rerum cupiditate enim mollitia obcaecati molestias doloribus exercitationem totam, quis sapiente quod deserunt optio. Officiis nam aut quo.</div>
+					</div>
+					<div class="faq__item">
+						<div class="title">Подходит ли сервис АТОЛ Онлайн для организаций, у которых будет удержание денег из зарплаты сотрудникам?</div>
+						<div class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi provident facere ducimus rerum cupiditate enim mollitia obcaecati molestias doloribus exercitationem totam, quis sapiente quod deserunt optio. Officiis nam aut quo.</div>
+					</div>
+					<div class="faq__item">
+						<div class="title">Подходит ли сервис АТОЛ Онлайн для организаций, у которых будет удержание денег из зарплаты сотрудникам?</div>
+						<div class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi provident facere ducimus rerum cupiditate enim mollitia obcaecati molestias doloribus exercitationem totam, quis sapiente quod deserunt optio. Officiis nam aut quo.</div>
+					</div>
+					<div class="faq__item">
+						<div class="title">Подходит ли сервис АТОЛ Онлайн для организаций, у которых будет удержание денег из зарплаты сотрудникам?</div>
+						<div class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi provident facere ducimus rerum cupiditate enim mollitia obcaecati molestias doloribus exercitationem totam, quis sapiente quod deserunt optio. Officiis nam aut quo.</div>
+					</div>
+					<div class="faq__item">
+						<div class="title">Подходит ли сервис АТОЛ Онлайн для организаций, у которых будет удержание денег из зарплаты сотрудникам?</div>
+						<div class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi provident facere ducimus rerum cupiditate enim mollitia obcaecati molestias doloribus exercitationem totam, quis sapiente quod deserunt optio. Officiis nam aut quo.</div>
+					</div>
+					<div class="faq__all">Показать еще</div>
+				</div>
+			</div>
+		</div>  <!-- .faq -->
+		<div class="form-block">
+			<div class="form-block__inner">
+				<div class="form-block__title">
+					<div class="title">С НАМИ</div>
+					<div class="subtitle">Работать выгодно и удобно</div>
+				</div>
+				<div class="form-block__block">
+					<form action="/">
+						<div class="title">Вы можете оставить контакты и мы свяжемся для обсуждения выгодного для Вас решения.</div>
+						<div class="field">
+							<input type="text" placeholder="Ваше имя">
+						</div>
+						<div class="field">
+							<input type="tel" class="maskme" placeholder="+7 (___) ___-__-__">
+						</div>
+						<button type="submit">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>  <!-- .form-block -->
+		<div class="cookie-block">
+			<div class="cookie-block__inner">
+				<div class="cookie-block__text">УК «АТОЛ» использует файлы cookie. Подробная информация в политике обработки cookies. Вы можете запретить сохранение cookies в настройках своего браузера.</div>
+				<div class="cookie-block__button">ОК</div>
+			</div>
+		</div>  <!-- .form-block -->
+	</div>
+<footer class="footer">
+	<div class="footer__inner">
+		<div class="footer__logo">
+			<a href="/">
+				<img src="images/logo.svg" alt="">
+			</a>
+		</div>
+		<div class="footer__menu">
+			<ul>
+				<li>
+					<a href="/">Преимущества</a>
+				</li>
+				<li>
+					<a href="/">О сервисе</a>
+				</li>
+				<li>
+					<a href="/">Стоимость</a>
+				</li>
+				<li>
+					<a href="/">Интеграция</a>
+				</li>
+				<li>
+					<a href="/">Библиотека</a>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="/">ЦОД</a>
+				</li>
+				<li>
+					<a href="/">О нас</a>
+				</li>
+				<li>
+					<a href="/">Вопрос/Ответ</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__contacts">
+			<div class="phone">
+				<a href="tel:74951375656">+7 (495) 137-56-66  </a>
+			</div>
+			<div class="button">
+				<a href="/">API</a>
+			</div>
+			<div class="text">
+				ООО «АТОЛ Онлайн», ИНН 7714426164,<br /><span style="color: #999;">Адрес:</span> 127015, г. Москва, ул. Большая Новодмитровская, д. 14, стр. 2, этаж 4.<br /><span style="color: #999;">Для посетителей офис работает в ограниченном режиме:</span> получение оригиналов закрывающих документов - вторник и четверг, 11:00-13:00, обращаться к Анне Кухаревой. 
+			</div>
+		</div>
+		<div class="footer__text">
+			<div class="social">
+				<a href="/" target="_blank">
+					<img src="images/soc1.svg" alt="">
+				</a>
+				<a href="/" target="_blank">
+					<img src="images/soc2.svg" alt="">
+				</a>
+				<a href="/" target="_blank">
+					<img src="images/soc3.svg" alt="">
+				</a>
+				<a href="/" target="_blank">
+					<img src="images/soc4.svg" alt="">
+				</a>
+			</div>
+			<div class="texts">
+				<a href="/" class="link" target="_blank">Согласие на обработку персональных данных</a>
+				<a href="/" class="link" target="_blank">Политика конфиденциальности</a>
+				<a href="/" class="link" target="_blank">Библиотека</a>
+				<div class="text">Техническая поддержка: <a href="mailto:1@atol.ru">1@atol.ru</a></div>
+				<div class="text">Для партнеров: <a href="mailto:2@atol.ru">2@atol.ru</a></div>
+				<div class="text">Отдел продаж: <a href="mailto:3@atol.ru">3@atol.ru</a></div>
+			</div>
+		</div>
+	</div>
+</footer><!-- .footer -->
+
+<div class="popupform">
+	<div class="popupform__div"></div>
+	<div class="popupform__scrolling">
+		<div class="popupform__wrap">
+			<div class="popupform__body">
+				<div class="popupform__title">Заполните заявку</div>
+				<form action="/">
+					<div class="field">
+						<input type="text" placeholder="Имя">
+					</div>
+					<div class="field">
+						<input type="text" placeholder="Телефон *" required>
+					</div>
+					<div class="field">
+						<input type="email" placeholder="Почта" required>
+					</div>
+					<div class="field">
+						<input type="text" placeholder="Ваш сайт (если есть)">
+					</div>
+					<div class="field">
+						<label class="checkbox">
+							<input type="checkbox" checked required>
+							<span>Я даю свое согласие на обработку персональных данных</span>
+						</label>
+					</div>
+					<button type="submit">Отправить</button>
+				</form>
+			</div>
+			<div class="popupform__close"></div>
+		</div>
+	</div>
+</div> <!-- .popupform -->
+
+<script src="js/main.min.js"> </script>
+</body>
 </html>
