@@ -25,23 +25,46 @@ $(window).on('scroll', function(){
 $(document).on('keydown', function(event){
     if (event.which == 27) {
         hideForm();
-		console.log('keydown')
     }
 });
 $(document).on('click', function(event){
-	if( $(event.target).closest('.popupform__wrap').length || $(event.target).closest('.header-button').length || $(event.target).closest('.integration__left .link').length ) return;
+	if( $(event.target).closest('.popupform__wrap').length || $(event.target).closest('.header-button').length || $(event.target).closest('.experience__right .item').length ) return;
 	hideForm();
 	event.stopPropagation();
 });
 $(document).on('click', '.popupform__close' , hideForm);
-$(document).on('click', '.header-button, .integration__left .link', showForm);
+$(document).on('click', '.header-button', showForm);
 
 function showForm(){
-	$('html').addClass('showpopup');
+	$('html').addClass('showpopup showpopup1');
 	return false;
 };
 function hideForm(){
-	$('html').removeClass('showpopup');
+	$('html').removeClass('showpopup showpopup1');
+};
+// POPUP FORM -----
+
+
+// POPUP FORM +++++
+$(document).on('keydown', function(event){
+    if (event.which == 27) {
+        hideForm1();
+    }
+});
+$(document).on('click', function(event){
+	if( $(event.target).closest('.popupform__wrap').length || $(event.target).closest('.integration__left .link').length || $(event.target).closest('.experience__right .item').length ) return;
+	hideForm1();
+	event.stopPropagation();
+});
+$(document).on('click', '.popupform__close' , hideForm1);
+$(document).on('click', '.integration__left .link', showForm1);
+
+function showForm1(){
+	$('html').addClass('showpopup showpopup2');
+	return false;
+};
+function hideForm1(){
+	$('html').removeClass('showpopup showpopup2');
 };
 // POPUP FORM -----
 
