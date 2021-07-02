@@ -1910,6 +1910,7 @@ header {
 
 @media all and (min-width: 1260px) {
 	.faq__left {
+		min-width: 500px;
 		max-width: 500px;
 		img {
 			margin: 0 -50px 0 -100px;
@@ -2317,6 +2318,9 @@ header {
 }
 
 @media all and (min-width: 1350px) {
+	.faq__right .list {
+		max-height: 530px;
+	}
 	.faq__left {
 		max-width: 618px;
 		min-width: 618px;
