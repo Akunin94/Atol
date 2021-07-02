@@ -62,6 +62,15 @@ $(function(){
 
 
 // EXPERIENCE +++++
+let timerId = setTimeout(function tick() {
+	if ( $('.experience__right .item.active + .item').length ) {
+		$('.experience__right .item.active + .item').click();
+	} else {
+		$('.experience__right .item:first-child').click();
+	}
+	
+	timerId = setTimeout(tick, 10000);
+  }, 10000);
 $(document).on('click', '.experience__right .item:not(.active)', function(){
 	let $this = $(this),
 		ind = $this.index(),
