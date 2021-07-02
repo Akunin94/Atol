@@ -29,15 +29,16 @@ $(document).on('keydown', function(event){
     }
 });
 $(document).on('click', function(event){
-	if( $(event.target).closest('.popupform__wrap').length || $(event.target).closest('.header-button').length ) return;
+	if( $(event.target).closest('.popupform__wrap').length || $(event.target).closest('.header-button').length || $(event.target).closest('.integration__left .link').length ) return;
 	hideForm();
 	event.stopPropagation();
 });
 $(document).on('click', '.popupform__close' , hideForm);
-$(document).on('click', '.header-button' , showForm);
+$(document).on('click', '.header-button, .integration__left .link', showForm);
 
 function showForm(){
 	$('html').addClass('showpopup');
+	return false;
 };
 function hideForm(){
 	$('html').removeClass('showpopup');
