@@ -336,6 +336,7 @@ header {
 	}
 }
 .header-note {
+	transition: 0.2s;
 	max-width: 500px;
 	display: none;
 	position: absolute;
@@ -366,6 +367,7 @@ header {
 	font-size: 0;
 	cursor: pointer;
 	border-radius: 31px;
+	z-index: 1;
 	&:before {
 		position: absolute;
 		right: 0;
@@ -1933,6 +1935,9 @@ header {
 }
 
 @media all and (min-width: 1260px) {
+	.header-button:hover + .header-note {
+		transform: translateX(162px);
+	}
 	.popupform__body {
 		padding-top: 45px;
 	}
@@ -3095,5 +3100,8 @@ header {
 	.steps__image img {
 		margin: 0;
 		max-width: 100%;
+	}
+	.header-button:hover + .header-note {
+		transform: translateX(237px);
 	}
 }
