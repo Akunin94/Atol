@@ -1,6 +1,18 @@
 (function($) {
 'use strict';
 
+$(function(){
+	let headerTl = gsap.timeline();
+
+	headerTl.from('.header-wrap', {scale: 1.05, duration: 1});
+	headerTl.from('.header-top', {translateY: '-100%', duration: 0.2})
+	headerTl.from('.header-slider', {translateX: '100%', opacity: 0});
+	headerTl.from('.header-text', {translateX: '-100%', opacity: 0});
+	headerTl.from('.header-note', {translateY: '100%', opacity: 0, duration: .2});
+	headerTl.from('.header-button', {translateY: '100%', opacity: 0, duration: .2}, "-=.2");
+	
+});
+
 // MENU TOP +++++
 $(document).on('click', '.menu-top .burger', function(){
     $('.menu-top').toggleClass('active');
@@ -76,6 +88,7 @@ $(function(){
 			items: 1,
 			autoplay: true,
 			loop: true,
+			animateOut: 'fadeOut',
 			nav: false,
 			dots: true
 		})
