@@ -25,9 +25,9 @@ $(document).on('click', function(event){
 });
 $(window).on('scroll', function(){
 	if ( $(window).scrollTop() >= 100 ) {
-		$('.header-top').addClass('fixed_menu');
+		$('.header-top, .header-wrap').addClass('fixed_menu');
 	} else {
-		$('.header-top').removeClass('fixed_menu');
+		$('.header-top, .header-wrap').removeClass('fixed_menu');
 	}
 });
 // MENU TOP -----
