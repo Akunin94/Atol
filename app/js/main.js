@@ -1,18 +1,6 @@
 (function($) {
 'use strict';
 
-$(function(){
-	let headerTl = gsap.timeline();
-
-	headerTl.from('.header-wrap', {scale: 1.05, duration: 1});
-	headerTl.from('.header-top', {translateY: '-100%', duration: 0.2})
-	headerTl.from('.header-slider', {translateX: '100%', opacity: 0});
-	headerTl.from('.header-text', {translateX: '-100%', opacity: 0});
-	headerTl.from('.header-note', {translateY: '100%', opacity: 0, duration: .2});
-	headerTl.from('.header-button', {translateY: '100%', opacity: 0, duration: .2}, "-=.2");
-	
-});
-
 // MENU TOP +++++
 $(document).on('click', '.menu-top .burger', function(){
     $('.menu-top').toggleClass('active');
@@ -161,5 +149,154 @@ $(function(){
 	});
 });
 // INPUT MASK -----
+
+
+// ANIMATIONS START +++++
+
+$(function(){
+	gsap.registerPlugin(ScrollTrigger);
+
+	let headerTl = gsap.timeline();
+
+	headerTl.from('.header-wrap', {scale: 1.05, duration: 1});
+	headerTl.from('.header-top', {translateY: '-100%', duration: 0.2})
+	headerTl.from('.header-slider', {translateX: '100%', opacity: 0});
+	headerTl.from('.header-text', {translateX: '-100%', opacity: 0});
+	headerTl.from('.header-note', {translateY: '100%', opacity: 0, duration: .2});
+	headerTl.from('.header-button', {translateY: '100%', opacity: 0, duration: .2}, "-=.2");
+
+	gsap.from('.advantages__title .title', {scrollTrigger: {
+		trigger: '.advantages__title .title',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-100%'})
+	gsap.from('.advantages__title .subtitle', {scrollTrigger: {
+		trigger: '.advantages__title .subtitle',
+		toggleActions: 'restart pause restart pause'
+	}, translateX: '-100%'})
+	gsap.from('.advantages__title .bg', {scrollTrigger: {
+		trigger: '.advantages__title .bg',
+		toggleActions: 'restart pause restart pause'
+	}, translateX: '100%'})
+
+
+	ScrollTrigger.batch(".advantages__item", {
+		onEnter: batch => gsap.fromTo(batch, {translateX: '-400%', opacity: 0, stagger: 0.1}, {translateX: '0', opacity: 1, stagger: 0.1}),
+		onEnterBack: batch => gsap.fromTo(batch, {translateX: '-400%', opacity: 0, stagger: 0.1}, {translateX: '0', opacity: 1, stagger: 0.1}),
+		onLeave: batch => gsap.fromTo(batch, {translateX: '0', opacity: 1, stagger: 0.1}, {translateX: '-400%', opacity: 0, stagger: 0.1}),
+		onLeaveBack: batch => gsap.fromTo(batch, {translateX: '0', opacity: 1, stagger: 0.1}, {translateX: '-400%', opacity: 0, stagger: 0.1}),
+	});
+
+
+	gsap.from('.double-block__bottom', {scrollTrigger: {
+		trigger: '.double-block__bottom',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '100%', opacity: '0'})
+	gsap.from('.double-block__bottom .title', {scrollTrigger: {
+		trigger: '.double-block__bottom',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '100%', opacity: '0', delay: 0.4})
+	gsap.from('.double-block__bottom .body', {scrollTrigger: {
+		trigger: '.double-block__bottom',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '100%', opacity: '0', delay: 0.4})
+
+	
+	gsap.from('.double-block__top .maintitle', {scrollTrigger: {
+		trigger: '.double-block__top .maintitle',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-100%', opacity: '0'})
+	ScrollTrigger.batch(".double-block__top--item", {
+		onEnter: batch => gsap.fromTo(batch, {translateX: '-400%', opacity: 0, stagger: 0.1}, {translateX: '0', opacity: 1, stagger: 0.1}),
+		onEnterBack: batch => gsap.fromTo(batch, {translateX: '-400%', opacity: 0, stagger: 0.1}, {translateX: '0', opacity: 1, stagger: 0.1}),
+		onLeave: batch => gsap.fromTo(batch, {translateX: '0', opacity: 1, stagger: 0.1}, {translateX: '-400%', opacity: 0, stagger: 0.1}),
+		onLeaveBack: batch => gsap.fromTo(batch, {translateX: '0', opacity: 1, stagger: 0.1}, {translateX: '-400%', opacity: 0, stagger: 0.1}),
+	});
+
+
+	gsap.from('.partners__item', {scrollTrigger: {
+		trigger: '.partners__inner',
+		toggleActions: 'restart pause restart pause'
+	},  left: '43%', top: '40%', duration: 1.2, opacity: '0'})
+
+
+	gsap.from('.steps__image', {scrollTrigger: {
+		trigger: '.steps__image',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '100%', opacity: '0'})
+	gsap.from('.steps__title', {scrollTrigger: {
+		trigger: '.steps__title',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-100%', opacity: '0'})	
+	ScrollTrigger.batch(".steps__item", {
+		onEnter: batch => gsap.fromTo(batch, {left: '-400%', opacity: 0, stagger: 0.2}, {left: '0', opacity: 1, stagger: 0.2}),
+		onEnterBack: batch => gsap.fromTo(batch, {left: '-400%', opacity: 0, stagger: 0.2}, {left: '0', opacity: 1, stagger: 0.2}),
+		onLeave: batch => gsap.fromTo(batch, {left: '0', opacity: 1, stagger: 0.2}, {left: '-400%', opacity: 0, stagger: 0.2}),
+		onLeaveBack: batch => gsap.fromTo(batch, {left: '0', opacity: 1, stagger: 0.2}, {left: '-400%', opacity: 0, stagger: 0.2}),
+	});
+
+
+	gsap.from('.quadruple-block .top .left .title', {scrollTrigger: {
+		trigger: '.quadruple-block .top .left .title',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-100%', opacity: '0'})
+	ScrollTrigger.batch(".quadruple-block .top .left .item", {
+		onEnter: batch => gsap.fromTo(batch, {left: '-400%', opacity: 0, stagger: 0.2}, {left: '0', opacity: 1, stagger: 0.2}),
+		onEnterBack: batch => gsap.fromTo(batch, {left: '-400%', opacity: 0, stagger: 0.2}, {left: '0', opacity: 1, stagger: 0.2}),
+		onLeave: batch => gsap.fromTo(batch, {left: '0', opacity: 1, stagger: 0.2}, {left: '-400%', opacity: 0, stagger: 0.2}),
+		onLeaveBack: batch => gsap.fromTo(batch, {left: '0', opacity: 1, stagger: 0.2}, {left: '-400%', opacity: 0, stagger: 0.2}),
+	});
+	gsap.from('.quadruple-block .bottom .left .titles', {scrollTrigger: {
+		trigger: '.quadruple-block .bottom .left .titles',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-100%', opacity: '0'})
+	gsap.from('.quadruple-block .bottom .left .note', {scrollTrigger: {
+		trigger: '.quadruple-block .bottom .left .note',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-100%', opacity: '0'})
+	ScrollTrigger.batch(".quadruple-block .bottom .left .item", {
+		onEnter: batch => gsap.fromTo(batch, {left: '-400%', opacity: 0, stagger: 0.2}, {left: '0', opacity: 1, stagger: 0.2}),
+		onEnterBack: batch => gsap.fromTo(batch, {left: '-400%', opacity: 0, stagger: 0.2}, {left: '0', opacity: 1, stagger: 0.2}),
+		onLeave: batch => gsap.fromTo(batch, {left: '0', opacity: 1, stagger: 0.2}, {left: '-400%', opacity: 0, stagger: 0.2}),
+		onLeaveBack: batch => gsap.fromTo(batch, {left: '0', opacity: 1, stagger: 0.2}, {left: '-400%', opacity: 0, stagger: 0.2}),
+	});	
+
+
+	gsap.from('.integration__title', {scrollTrigger: {
+		trigger: '.integration__title',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-100%', opacity: '0'})
+	gsap.from('.integration__left', {scrollTrigger: {
+		trigger: '.integration__left',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-100%', translateY: '100%', opacity: '0'})
+	gsap.from('.integration__right', {scrollTrigger: {
+		trigger: '.integration__right',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '100%', translateY: '100%', opacity: '0'})
+	ScrollTrigger.batch(".integration__left .item", {
+		onEnter: batch => gsap.fromTo(batch, {translateX: '-400%', opacity: 0, stagger: 0.2}, {translateX: '0', opacity: 1, stagger: 0.2}),
+		onEnterBack: batch => gsap.fromTo(batch, {translateX: '-400%', opacity: 0, stagger: 0.2}, {translateX: '0', opacity: 1, stagger: 0.2}),
+		onLeave: batch => gsap.fromTo(batch, {translateX: '0', opacity: 1, stagger: 0.2}, {translateX: '-400%', opacity: 0, stagger: 0.2}),
+		onLeaveBack: batch => gsap.fromTo(batch, {translateX: '0', opacity: 1, stagger: 0.2}, {translateX: '-400%', opacity: 0, stagger: 0.2}),
+	});	
+
+
+	gsap.from('.experience__left', {scrollTrigger: {
+		trigger: '.experience__left',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-100%', translateY: '100%', opacity: '0'})
+	gsap.from('.experience__right', {scrollTrigger: {
+		trigger: '.experience__right',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '100%', translateY: '100%', opacity: '0'})
+	ScrollTrigger.batch(".experience__right .top .item", {
+		onEnter: batch => gsap.fromTo(batch, {translateX: '400%', opacity: 0, stagger: 0.2}, {translateX: '0', opacity: 1, stagger: 0.2}),
+		onEnterBack: batch => gsap.fromTo(batch, {translateX: '400%', opacity: 0, stagger: 0.2}, {translateX: '0', opacity: 1, stagger: 0.2}),
+		onLeave: batch => gsap.fromTo(batch, {translateX: '0', opacity: 1, stagger: 0.2}, {translateX: '400%', opacity: 0, stagger: 0.2}),
+		onLeaveBack: batch => gsap.fromTo(batch, {translateX: '0', opacity: 1, stagger: 0.2}, {translateX: '400%', opacity: 0, stagger: 0.2}),
+	});	
+});
+// ANIMATIONS END +++++
+
 
 })(jQuery)
