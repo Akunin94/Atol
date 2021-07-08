@@ -295,6 +295,64 @@ $(function(){
 		onLeave: batch => gsap.fromTo(batch, {translateX: '0', opacity: 1, stagger: 0.2}, {translateX: '400%', opacity: 0, stagger: 0.2}),
 		onLeaveBack: batch => gsap.fromTo(batch, {translateX: '0', opacity: 1, stagger: 0.2}, {translateX: '400%', opacity: 0, stagger: 0.2}),
 	});	
+
+
+	gsap.from('.reviews', {scrollTrigger: {
+		trigger: '.reviews',
+		toggleActions: 'restart pause restart pause'
+	},  translateY: '100%', opacity: '0'})
+	gsap.from('.reviews__inner', {scrollTrigger: {
+		trigger: '.reviews__inner',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-100%', opacity: '0'})
+
+
+	gsap.from('.faq__left', {scrollTrigger: {
+		trigger: '.faq__left',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-200%', opacity: '0'})
+	gsap.from('.faq__title', {scrollTrigger: {
+		trigger: '.faq__title',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '200%', opacity: '0'})
+	gsap.from('.faq .list', {scrollTrigger: {
+		trigger: '.faq .list',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '200%', opacity: '0', delay: 0.5})
+
+
+	gsap.from('.form-block__title', {scrollTrigger: {
+		trigger: '.form-block__title',
+		toggleActions: 'restart pause restart pause'
+	},  translateY: '100%', opacity: '0'})
+	gsap.from('.form-block__block', {scrollTrigger: {
+		trigger: '.form-block__block',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '200%', opacity: '0'})
+
+
+	gsap.from('.cookie-block', {scrollTrigger: {
+		trigger: '.cookie-block',
+		toggleActions: 'restart pause restart pause'
+	},  translateY: '-200%', translateX: '-200%', opacity: '0'})
+
+
+	gsap.from('.footer__logo', {scrollTrigger: {
+		trigger: '.footer__logo',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-200%', opacity: '0'})
+	gsap.from('.footer__menu', {scrollTrigger: {
+		trigger: '.footer__menu',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '-200%', opacity: '0', delay: 1})
+	gsap.from('.footer__text', {scrollTrigger: {
+		trigger: '.footer__text',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '200%', opacity: '0'})
+	gsap.from('.footer__contacts', {scrollTrigger: {
+		trigger: '.footer__contacts',
+		toggleActions: 'restart pause restart pause'
+	},  translateX: '200%', opacity: '0', delay: 1})
 });
 // ANIMATIONS END +++++
 
