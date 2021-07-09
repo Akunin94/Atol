@@ -142,6 +142,11 @@ template {
 [hidden] {
 	display: none;
 }
+.block-anchor {
+	font-size: 0;
+	position: relative;
+	top: -90px;
+}
 .site-wrapper {
 	overflow: hidden;
 }
@@ -369,6 +374,7 @@ header {
 	background: linear-gradient(113.68deg, #EC1B30 18.69%, #4676F2 94.69%);
 	font-size: 0;
 	cursor: pointer;
+	text-decoration: none;
 	border-radius: 31px;
 	z-index: 1;
 	&:before {
@@ -621,7 +627,9 @@ header {
 		}
 	}
 }
-
+html {
+	scroll-behavior: smooth;
+}
 .advantages {
 	padding: 0 15px 25px;
 	&__inner {
@@ -3118,5 +3126,13 @@ header {
 	}
 	.header-button:hover + .header-note {
 		transform: translateX(237px) !important;
+	}
+	.reviews__list .item:first-child {
+		min-width: 37.33%;
+		max-width: 37.33%;
+		& ~ .item {
+			min-width: 31.33%;
+			max-width: 31.33%;
+		}
 	}
 }

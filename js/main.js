@@ -22,7 +22,7 @@ $(window).on('scroll', function(){
 
 
 // POPUP FORM +++++
-$(document).on('keydown', function(event){
+/*$(document).on('keydown', function(event){
     if (event.which == 27) {
         hideForm();
     }
@@ -41,7 +41,7 @@ function showForm(){
 };
 function hideForm(){
 	$('html').removeClass('showpopup showpopup1');
-};
+};*/
 // POPUP FORM -----
 
 
