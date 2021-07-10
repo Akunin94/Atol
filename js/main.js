@@ -78,7 +78,7 @@ $(function(){
 			loop: true,
 			animateOut: 'fadeOut',
 			nav: false,
-			dots: true
+			dots: true,
 		})
 	}
 });
