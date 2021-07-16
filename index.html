@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100587263-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-100587263-1');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5WZCCLZ');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, max-width=1920, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow" />
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <title>Облачные кассы АТОЛ Онлайн от 1490 руб.</title>
@@ -13,6 +29,26 @@
 <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body> 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WZCCLZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+	ym(46020141, "init", {
+		 clickmap:true,
+		 trackLinks:true,
+		 accurateTrackBounce:true,
+		 webvisor:true,
+		 trackHash:true
+	});
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/46020141" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
 	<div class="site-wrapper">
 		<div class="header-wrap">
 			<header>
@@ -43,6 +79,9 @@
 									<a href="https://zkh.atol.ru">ЖКХ</a>
 								</li>
 								<!-- <li>
+									<a href="#calc">Цены</a>
+								</li> -->
+								<!-- <li>
 									<a href="https://online.atol.ru/#dop">Поддержка</a>
 								</li> -->
 							</ul>
@@ -72,7 +111,7 @@
 						<div class="right">от <strong>1490 ₽</strong></div>
 					</div>
 				</div>
-				<a class="header-button" href="https://online.atol.ru/lk/Account/Register">Оставьте заявку</a>
+				<a class="header-button" href="https://online.atol.ru/lk/Account/Register?utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">Оставьте заявку</a>
 				<div class="header-note">
 					<div class="title">Более 30 000 компаний выдают клиентам чеки АТОЛ Онлайн</div>
 					<div class="body"><strong>Подберем оптимальное решение</strong> для любых целей, качественно внедрим, быстро ответим на любые вопросы</div>
@@ -333,12 +372,252 @@
 					<div class="right">
 						<div class="img">
 							<img src="images/phone.png" alt="">
-							<a href="https://online.atol.ru/lk/Account/Register">Подключиться</a>
+							<a href="https://online.atol.ru/lk/Account/Register?utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">Подключиться</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div> <!-- .quadruple-block -->
+		<div class="calculator" style="display: none;">
+			<a class="block-anchor" id="calc"></a>
+			<div class="calculator__inner">
+				<div class="calculator__title">ТАРИФЫ</div>
+				<div class="calculator__blocks">
+					<div class="calculator__left">
+						<div class="calculator__step step1">
+							<div class="body">
+								<div class="item">
+									<div class="title">
+										Транзакций в день <span class="hint">?</span>
+										<div class="hinttext">Текст подсказки</div>
+									</div>
+									<input type="text" value="50" readonly>
+									<div class="slider" data-start="50" data-min="50" data-max="4000" data-step="1"></div>
+								</div>
+								<div class="item">
+									<div class="title">
+										Пик транзакций в минуту<span class="hint">?</span>
+										<div class="hinttext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vero repellendus iusto totam assumenda laboriosam autem cum necessitatibus veniam, explicabo ducimus sit qui possimus doloremque quia culpa! Perferendis, labore magnam.</div>
+									</div>
+									<input type="text" value="5" readonly>
+									<div class="slider" data-start="5" data-min="1" data-max="60" data-step="1"></div>
+								</div>
+							</div>
+						</div>
+						<div class="calculator__step step2">
+							<div class="body">
+								<div class="title">Выберите фискальный накопитель <span class="hint">?</span></div>
+								<input type="number" id="calc_val3">
+							</div>
+						</div>
+						<div class="calculator__step step3">
+							<div class="body">
+								<div class="title">Выберите тариф</div>
+								<div class="note">Все тарифы включают: аренду касс, подключение к услуге ОФД, отправку электронных чеков по e-mail.</div>
+								<input type="number">
+							</div>
+							<div class="accordion">
+								<label>
+									<input type="checkbox" name="calc_tarif" value="basic">
+									<div class="accordion__item basic">
+										<div class="tit">Базовый</div>
+										<div class="bod">
+											<div class="list">
+												<div class="block">Техническое сопровождение (пакет: индивидуальный)</div>
+												<div class="block">Информационное сопровождение клиента при первичной регистрации ККТ в ФНС (срочная)</div>
+												<div class="block">Предоставление доступа к отчёту по чекам за предшествующие сутки</div>
+												<div class="block">Замена ФН (более 1 раза в 3 мес.)</div>
+											</div>
+											<div class="more">Подробнее</div>
+										</div>
+									</div>
+								</label>
+								<label>
+									<input type="checkbox" name="calc_tarif" value="full">
+									<div class="accordion__item full">
+										<div class="tit">Без забот</div>
+										<div class="bod">
+											<div class="list">
+												<div class="block">Техническое сопровождение (пакет: индивидуальный)</div>
+												<div class="block">Информационное сопровождение клиента при первичной регистрации ККТ в ФНС (срочная)</div>
+												<div class="block">Предоставление доступа к отчёту по чекам за предшествующие сутки</div>
+												<div class="block">Замена ФН (более 1 раза в 3 мес.)</div>
+												<div class="block new">Предоставление кода активации и информационное сопровождение при активации ОФД(из предложенного списка)</div>
+												<div class="block new">Информационное сопровождение клиента, при первичной регистрации ККТ в ФНС (плановая)</div>
+												<div class="block new">Замена ФН (не более 1 раза в 3 мес.)</div>
+												<div class="block new">Информационное сопровождение клиента при перерегистрации ККТ в ФНС</div>
+												<div class="block new">Услуга по формированию чеков коррекции (пакет 200 чеков)</div>
+												<div class="block new">Техническое сопровождение (пакет: базовый)</div>
+											</div>
+											<div class="more">Подробнее</div>
+										</div>
+									</div>
+								</label>
+							</div>
+						</div>
+						<div class="calculator__step step4">
+							<div class="body">
+								<div class="title">Примените дополнительные услуги к своему тарифу</div>
+								<div class="bod">
+									<label>
+										<input type="checkbox" name="dop" value="dop1">
+										<div>Предоставление кода активации и информационное сопровождение при активации ОФД(из предложенного списка)</div>
+									</label>
+									<label>
+										<input type="checkbox" name="dop" value="dop2">
+										<div>Информационное сопровождение клиента, при первичной регистрации ККТ в ФНС (плановая)</div>
+									</label>
+									<label>
+										<input type="checkbox" name="dop" value="dop3">
+										<div>Информационное сопровождение клиента при перерегистрации ККТ в ФНС</div>
+									</label>
+									<label>
+										<input type="checkbox" name="dop" value="dop4">
+										<div>Замена ФН (не более 1 раза в 3 мес.)</div>
+									</label>
+									<label>
+										<input type="checkbox" name="dop" value="dop5">
+										<div>Техническое сопровождение (пакет: базовый)</div>
+									</label>
+									<label>
+										<input type="checkbox" name="dop" value="dop6">
+										<div>Услуга по формированию чеков коррекции (пакет 200 чеков)</div>
+									</label>
+									<label>
+										<input type="checkbox" name="dop" value="dop7">
+										<div>Замена ФН (более 1 раза в 3 мес.)</div>
+									</label>
+									<label>
+										<input type="checkbox" name="dop" value="dop8">
+										<div>Предоставление доступа к отчёту по чекам за предшествующие сутки</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="calculator__right">
+						<div class="item">
+							<div class="left">Количество касс</div>
+							<div class="middle"></div>
+							<div class="right">1 шт</div>
+						</div>
+						<div class="item">
+							<div class="left">Количество ФН</div>
+							<div class="middle"></div>
+							<div class="right">1 шт</div>
+						</div>
+						<div class="item">
+							<div class="left">Количество резервных касс</div>
+							<div class="middle"></div>
+							<div class="right">1 шт</div>
+						</div>
+						<div class="item1">
+							<div class="title">За 1 месяц</div>
+							<div class="body">
+								<span id="formonth">1 490</span> ₽
+							</div>
+						</div>
+						<div class="item1">
+							<div class="title">За месяц при оплате на год</div>
+							<div class="body">
+								<span id="foryear">1 290</span> ₽
+							</div>							
+						</div>
+						<div class="subtitle">Единоразовые платежи:</div>
+						<div class="item">
+							<div class="left">Стоимость ФН</div>
+							<div class="middle"></div>
+							<div class="right"><span>6 900</span> ₽</div>
+						</div>
+						<div class="item">
+							<div class="left">Дополнительные услуги</div>
+							<div class="middle"></div>
+							<div class="right"><span>1 000</span> ₽</div>
+						</div>
+						<div class="button">Купить</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- .calculator -->
+		<div class="tarifs">
+			<a class="block-anchor" id="tarifs"></a>
+			<div class="tarifs__inner">
+				<div class="tarifs__titlewrap">
+					<div class="tarifs__title">ТАРИФЫ</div>
+				</div>
+				<div class="tarifs__blocks">
+					<div class="tarifs__item">
+						<div class="top">
+							<div class="left">Базовый</div>
+							<div class="right">1490 ₽/мес</div>
+						</div>
+						<div class="blocks">
+							<div class="item">В стоимость входят все услуги облачной фискализации.</div>
+							<div class="item">Регистрироваться в ФНС, заключать договор с ОФД и интегрировать кассу с платежной системой нужно будет самостоятельно. Мы можем помочь, но за дополнительную плату.</div>
+							<div class="item">Фискальный накопитель придется докупить отдельно — за 6 900 ₽, на 15 месяцев или 10 200 ₽ на 36 месяцев.</div>
+						</div>
+						<div class="button">Подключиться</div>
+						<div class="popupform">
+							<div class="popupform__div"></div>
+							<div class="popupform__scrolling">
+								<div class="popupform__wrap">
+									<div class="popupform__body">
+										<div class="popupform__title">CMS, CRM и учетные системы</div>
+										<div class="popupform__note">Для каких расчетов вам нужна касса?</div>
+										<div class="popupform__links">
+											<a href="https://online.atol.ru/lk/Account/Register?partnerUid=940e14a3-03a6-49f3-b1ea-3998b83ab4dc">в интернет-магазине (еком)</a>
+											<a href="https://online.atol.ru/lk/Account/Register?utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">в такси</a>
+											<a href="https://online.atol.ru/lk/Account/Register?utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">в общественном транспорте</a>
+											<a href="https://online.atol.ru/lk/Account/Register?utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">для развозной торговли (для курьеров)</a>
+											<a href="https://online.atol.ru/lk/Account/Register?utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">в вендинговых аппаратах</a>
+											<a href="https://online.atol.ru/lk/Account/Register?utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">в сфере ЖКХ</a>
+											<a href="https://www.atol.ru/catalog/kontrolno-kassovaya-tekhnika/?utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">в розничном магазине</a>
+										</div>
+									</div>
+									<div class="popupform__close"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tarifs__item full">
+						<div class="top">
+							<div class="left">Без забот</div>
+							<div class="right">2900 ₽/мес</div>
+						</div>
+						<div class="note">Сервис под ключ, возьмем все заботы о кассе на себя</div>
+						<div class="blocks">
+							<div class="item">В стоимость входят все услуги облачной фискализации.</div>
+							<div class="item">Поможем с регистрацией и перерегистрацией в ФНС, предоставим партнерский ОФД бесплатно.</div>
+							<div class="item">Поможем настроить интеграцию облачной кассы с платежной системой.</div>
+							<div class="item">Предоставим выделенную линию техподдержки для решения любых вопросов с работой облачной кассы.</div>
+							<div class="item">При оплате тарифа на 15/36 месяцев в стоимость входит фискальный накопитель.</div>
+						</div>
+						<div class="button">Подключиться</div>
+						<div class="popupform">
+							<div class="popupform__div"></div>
+							<div class="popupform__scrolling">
+								<div class="popupform__wrap">
+									<div class="popupform__body">
+										<div class="popupform__title">CMS, CRM и учетные системы</div>
+										<div class="popupform__note">Для каких расчетов вам нужна касса?</div>
+										<div class="popupform__links">
+											<a href="https://online.atol.ru/lk/Account/Register?partnerUid=bbb2a985-9ef9-48ad-8026-da327ac352f5&utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">в интернет-магазине (еком)</a>
+											<a href="https://online.atol.ru/lk/Account/Register?partnerUid=f63d78f1-1e2a-439e-98d4-f242619aeb91&utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">в такси</a>
+											<a href="https://online.atol.ru/lk/Account/Register?partnerUid=f63d78f1-1e2a-439e-98d4-f242619aeb91&utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">в общественном транспорте</a>
+											<a href="https://online.atol.ru/lk/Account/Register?partnerUid=f63d78f1-1e2a-439e-98d4-f242619aeb91&utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">для развозной торговли (для курьеров)</a>
+											<a href="https://online.atol.ru/lk/Account/Register?partnerUid=3e28882a-a153-4c23-8e0c-50bfce92d76a&utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciy">в вендинговых аппаратах</a>
+											<a href="https://online.atol.ru/lk/Account/Register?partnerUid=3e28882a-a153-4c23-8e0c-50bfce92d76a&utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciy">в сфере ЖКХ</a>
+											<a href="https://www.atol.ru/catalog/kontrolno-kassovaya-tekhnika/?utm_source=online&utm_medium=referral&utm_campaign=opros-pered-registraciya">в розничном магазине</a>
+										</div>
+									</div>
+									<div class="popupform__close"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- .tarifs -->
 		<div class="integration">
 			<a class="block-anchor" id="integration"></a>
 			<div class="integration__title">Интеграция с платформами и сервисами</div>

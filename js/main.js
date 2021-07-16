@@ -56,7 +56,7 @@ $(document).on('click', function(event){
 	hideForm1();
 	event.stopPropagation();
 });
-$(document).on('click', '.popupform__close' , hideForm1);
+$(document).on('click', '.popupform__close', hideForm1);
 $(document).on('click', '.integration__left .link', showForm1);
 
 function showForm1(){
@@ -87,25 +87,28 @@ $(function(){
 
 // EXPERIENCE +++++
 let timerId = setTimeout(function tick() {
-	if ( $('.experience__right .item.active + .item').length ) {
-		$('.experience__right .item.active + .item').click();
+	if ( $('.experience__right .top .item.active + .item').length ) {
+		experienceBlockChange( $('.experience__right .top .item.active + .item') );
 	} else {
-		$('.experience__right .item:first-child').click();
+		experienceBlockChange( $('.experience__right .top .item:first-child') );
 	}
 	
 	timerId = setTimeout(tick, 10000);
   }, 10000);
 $(document).on('click', '.experience__right .item:not(.active)', function(){
-	let $this = $(this),
+	experienceBlockChange( $(this) );
+});
+function experienceBlockChange($block){
+	let $this = $block,
 		ind = $this.index(),
 		$body = $this.closest('.experience').find('.bottom .item');
-	
+
 	$this.siblings().removeClass('active');
 	$this.addClass('active');
 
 	$body.removeClass('active');
 	$body.eq(ind).addClass('active');
-});
+}
 // EXPERIENCE -----
 
 
@@ -149,6 +152,54 @@ $(function(){
 	});
 });
 // INPUT MASK -----
+
+
+// CALCULATOR +++++
+let $rangeSliders = $('.calculator .slider');
+
+$rangeSliders.each(function(){
+	let $this = $(this),
+		min = $this.data('min'),
+		max = $this.data('max'),
+		step = $this.data('step'),
+		start = $this.data('start'),
+		slider = $this.get(0),
+		$input = $this.prev();
+	
+	noUiSlider.create(slider, {
+		start: [start],
+		step,
+		connect: 'lower',
+		range: {
+			'min': [min],
+			'max': [max]
+		}
+	});
+
+	slider.noUiSlider.on('update', function (values, handle) {
+		$input.val(+values[0]);
+	});
+});
+
+// CALCULATOR -----
+
+
+// TARIFS +++++
+
+$(document).on('click', '.tarifs__item .button', function(){
+	var $this = $(this),
+		$item = $this.closest('.tarifs__item'),
+		$form = $item.find('.popupform');
+	
+	$form.addClass('active');
+	
+	return false;
+});
+
+// TARIFS -----
+
+
+
 
 
 // ANIMATIONS START +++++
@@ -369,6 +420,20 @@ $(function(){
 		trigger: '.footer__contacts',
 		toggleActions: 'restart pause restart pause'
 	},  translateX: '200%', opacity: '0', delay: 1})
+
+
+	gsap.from('.tarifs__titlewrap', {scrollTrigger: {
+		trigger: '.tarifs__titlewrap',
+		toggleActions: 'restart pause restart pause'
+	},  translateY: '-200%', opacity: '0'})
+	gsap.from('.tarifs__item:not(.full)', {scrollTrigger: {
+		trigger: '.tarifs__item:not(.full)',
+		toggleActions: 'restart pause restart pause'
+	},  left: '-200%', opacity: '0'})
+	gsap.from('.tarifs__item.full', {scrollTrigger: {
+		trigger: '.tarifs__item.full',
+		toggleActions: 'restart pause restart pause'
+	},  left: '200%', opacity: '0'})
 });
 // ANIMATIONS END +++++
 

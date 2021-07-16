@@ -6,6 +6,9 @@ $mont: 'Montserrat', sans-serif;
 *, *:before, *:after {
 	box-sizing: border-box;
 }
+*, *:before, *:after {
+	box-sizing: border-box;
+}
 html {
 	line-height: 1.15;	
 	-webkit-text-size-adjust: 100%;	
@@ -347,12 +350,12 @@ header {
 }
 .header-note {
 	transition: 0.2s;
-	max-width: 500px;
+	max-width: 520px;
 	display: none;
 	position: absolute;
 	left: 145px;
 	bottom: 18px;
-	right: 20px;
+	right: 10px;
 	text-shadow: 1px 1px #666;
 	.title {
 		color: #fff;
@@ -415,6 +418,43 @@ header {
 	opacity: 0;
 	visibility: hidden;
 	transition: 0.25s;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+	&__note {
+		font-size: 14px;
+		line-height: 22px;
+		text-align: center;
+		color: #ec1b30;
+		margin-bottom: 29px;
+	}
+	&__links {
+		a {
+			display: block;
+			margin-bottom: 14px;
+			position: relative;
+			padding-left: 31px;
+			text-decoration: none;
+			color: #000;
+			font-size: 16px;
+			line-height: 22px;
+			&:before {
+				position: absolute;
+				content: '';
+				left: 0;
+				top: 3px;
+				width: 18px;
+				height: 18px;
+				border: 1px solid #c8c8c8;
+				border-radius: 5px;
+			}
+			&:hover:before {
+				border-color: transparent;
+				background: #ff0d22 url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.27226 9.04049C4.18101 9.14655 4.02318 9.15464 3.92154 9.05845L0.0792274 5.42184C-0.0224146 5.32565 -0.0268338 5.1638 0.0692985 5.06216L1.29348 3.76859C1.38967 3.66695 1.55152 3.66253 1.65316 3.75866L3.75206 5.74507C3.8537 5.84126 4.01153 5.83317 4.10278 5.72711L8.2033 0.962676C8.29455 0.856615 8.45606 0.844505 8.56206 0.935817L9.91181 2.09755C10.0179 2.18881 10.03 2.35031 9.93867 2.45637L4.27226 9.04049Z' fill='white'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+			}
+		}
+	}
 	&__title {
 		font-size: 24px;
 		font-weight: 500;
@@ -568,15 +608,15 @@ header {
 .header-slider {
 	margin: 20px 0 30px;
 	position: relative;
-	// &:before {
-	// 	position: absolute;
-	// 	left: 0;
-	// 	right: 0;
-	// 	top: 0;
-	// 	bottom: 0;
-	// 	content: '';
-	// 	background: linear-gradient(95.93deg, #EC1B30 14.49%, #4676F2 96.26%);
-	// }
+	&:before {
+		// position: absolute;
+		// left: 0;
+		// right: 0;
+		// top: 0;
+		// bottom: 0;
+		// content: '';
+		// background: linear-gradient(95.93deg, #EC1B30 14.49%, #4676F2 96.26%);
+	}
 	.owl-carousel {
 		position: relative;
 	}
@@ -1104,6 +1144,278 @@ html {
 					height: 10.6%;
 					font-size: 0;
 				}
+			}
+		}
+	}
+}
+.calculator {
+	&__inner {
+		counter-reset: count2;
+	}
+	&__title {
+		padding: 0 0 82px 14px;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 60px;
+		font-weight: 800;
+		line-height: 60px;
+		background: -webkit-linear-gradient(0deg, #EC1B30, #4676F2);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		position: relative;
+		&:before {
+			position: absolute;
+			left: 0;
+			right: 15px;
+			bottom: 0;
+			content: '';
+			height: 60px;
+			background: url(../images/tarif_bg.png) 0 0 no-repeat;
+		}
+	}
+	&__left {
+		margin-right: 15px;
+		padding: 22px 17px 7px 18px;
+		background: #ebebeb;
+	}
+	&__step {
+		padding: 8px 0 0 57px;
+		position: relative;
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 38px;
+			height: 38px;
+			border-radius: 50%;
+			background: linear-gradient(95.93deg, #EC1B30 14.49%, #4676F2 96.26%);
+			counter-increment: count2;
+			content: counters(count2, ".", decimal-leading-zero);
+			text-align: center;
+			color: #fff;
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 38px;
+		}
+		.item {
+			input[type="text"] {
+				border: none;
+				outline: none;
+				margin-left: auto;
+				padding: 0 5px 0 0;
+				width: 100px;
+				display: block;
+				background: none;
+				text-align: right;
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 19px;
+				margin-bottom: 5px;
+			}
+			.slider {
+				margin-bottom: 35px;
+			}
+			.noUi-target {
+				border: none;
+				background: #dfdfdf;
+				height: 4px;
+			}
+			.noUi-connect {
+				background: #ff0d22;
+			}
+			.noUi-horizontal .noUi-handle {
+				background: #ff0d22;
+				border: 7px solid #fff;
+				top: -10px;
+				box-shadow: 0 0 0 1px rgba(187, 187, 187, 0.7);
+				border-radius: 50%;
+				width: 24px;
+				height: 24px;
+			}
+		}
+		.title {
+			color: #000;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 20px;
+			margin-bottom: 11px;
+			position: relative;
+			&.active .hinttext {
+				display: block;
+			}
+			.hinttext {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 100%;
+				background: #fff;
+				padding: 10px;
+				font-size: 14px;
+				border-radius: 5px;
+				box-shadow: 0 0 0 5px #00000050;
+				display: none;
+			}
+			.hint {
+				display: inline-block;
+				vertical-align: baseline;
+				width: 18px;
+				height: 18px;
+				margin-left: 3px;
+				border-radius: 50%;
+				background: #A8A3A3;
+				color: #fcfcfc;
+				font-size: 12px;
+				line-height: 18px;
+				text-align: center;
+			}
+		}
+	}
+
+}
+.tarifs {
+	&__inner {
+		padding: 20px 20px 60px;
+		text-align: center;
+	}
+	&__title {
+		font-size: 50px;
+		font-weight: 800;
+		line-height: 1;		
+		background: -webkit-linear-gradient(0deg, #EC1B30, #4676F2);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-align: center;
+		margin-bottom: 30px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.popupform__body {
+		max-width: 518px;
+	}
+	&__item {
+		border: 1px solid #BCBCBC;
+		padding: 51px 20px 30px;
+		border-radius: 0 0 25px 25px;
+		margin-bottom: 30px;
+		border-top: none;
+		position: relative;
+		&:before {
+			position: absolute;
+			left: -1px;
+			right: -1px;
+			top: 0;
+			content: '';
+			height: 20px;
+			background: url(../images/tarif_item1.png) 100% 0 repeat-x;
+		}
+		&.full {
+			&:before {
+				background-image: url(../images/tarif_item2.png);
+			}
+			.top .left {
+				color: #ff0d22;
+			}
+			.top .right {
+				margin-bottom: 80px;
+				&:before {
+					position: absolute;
+					content: 'ВЫГОДНО';
+					right: 0;
+					top: 100%;
+					margin-top: 16px;
+					text-align: center;
+					padding: 11px 17px;
+					font-size: 23px;
+					line-height: 27px;
+					background: #4676f2;
+					border-radius: 12px;
+					color: #fff;
+					-webkit-text-fill-color: #fff;
+				}
+				&:after {
+					position: absolute;
+					content: '';
+					border-color: transparent;
+					border-style: solid;
+					border-width: 0 8px 10px 8px;
+					border-bottom-color: #4676f2;
+					right: 18px;
+					top: 100%;
+					margin-top: 6px;
+				}
+			}
+			.button {
+				background: #ec1b30;
+				border-color: #ec1b30;
+				&:hover {
+					color: #ec1b30;
+				}
+			}
+		}
+		.note {
+			font-size: 14px;
+			line-height: 1.2;
+			color: #747474;
+			margin-bottom: 28px;
+		}
+		.top {
+			.left {
+				font-size: 36px;
+				font-weight: 700;
+				line-height: 33px;
+				margin-bottom: 20px;
+			}
+			.right {
+				display: inline-block;
+				vertical-align: top;
+				font-size: 30px;
+				font-weight: 700;
+				line-height: 33px;
+				margin-bottom: 20px;
+				position: relative;
+				background: -webkit-linear-gradient(0deg, #EC1B30, #4676F2);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+		.blocks {
+			padding-bottom: 15px;
+			.item {
+				position: relative;
+				padding: 0 0 0 53px;
+				margin-bottom: 15px;
+				text-align: left;
+				font-size: 15px;
+				line-height: 1.5;
+				&:before {
+					position: absolute;
+					content: '';
+					left: 0;
+					top: 50%;
+					width: 30px;
+					margin-top: -18px;
+					height: 30px;
+					background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M15 30C23.2706 30 30 23.2712 30 15C30 13.5724 29.8007 12.1655 29.4061 10.8182C29.2117 10.1556 28.5199 9.77509 27.8555 9.96948C27.1924 10.1633 26.813 10.8575 27.0068 11.5201C27.3337 12.6395 27.5 13.8107 27.5 15C27.5 21.8924 21.8924 27.5 15 27.5C8.1076 27.5 2.5 21.8924 2.5 15C2.5 8.1076 8.1076 2.5 15 2.5C17.5049 2.5 19.9149 3.23242 21.9693 4.61761C22.5412 5.00366 23.3188 4.85199 23.7042 4.28009C24.09 3.70758 23.9395 2.9306 23.367 2.54486C20.8981 0.880127 18.0051 0 15 0C6.72943 0 0 6.72882 0 15C0 23.2712 6.72943 30 15 30Z' fill='%23556EE1'/%3E%3Cpath d='M27.866 2.86621L14.9998 15.7318L10.8836 11.6162C10.3953 11.1282 9.60426 11.1282 9.11598 11.6162C8.62801 12.1045 8.62801 12.8955 9.11598 13.3838L14.116 18.3838C14.3604 18.6282 14.6796 18.75 14.9998 18.75C15.3199 18.75 15.6391 18.6282 15.8836 18.3838L29.6336 4.63379C30.1215 4.14551 30.1215 3.35449 29.6336 2.86621C29.1453 2.37823 28.3543 2.37823 27.866 2.86621Z' fill='%23556EE1'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='30' height='30' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") 0 0 no-repeat;
+				}
+			}
+		}
+		.button {
+			cursor: pointer;
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 20px;
+			padding: 19px 10px 20px;
+			background: #000;
+			border-radius: 49px;
+			color: #fff;
+			border: 1px solid #000;
+			transition: 0.2s;
+			&:hover {
+				background: none;
+				color: #000;
 			}
 		}
 	}
@@ -1725,9 +2037,17 @@ html {
 	header {
 		background-size: cover;
 	}
+	.calculator__title {
+		display: block;
+		text-align: right;
+		padding-right: 15px;
+	}
 }
 
 @media all and (min-width: 380px) {
+	.calculator__title:before {
+		right: -15px;
+	}
 	.popupform__body {
 		padding-left: 45px;
 		padding-right: 45px;
@@ -1735,11 +2055,21 @@ html {
 }
 
 @media all and (min-width: 425px) {
+	.tarifs__item .blocks .item {
+		font-size: 18px;
+	}
 	.form-block__title {
 		text-align: center;
 	}
 	.popupform2 .popupform__body {
 		max-width: 686px;
+	}
+	.tarifs__item {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.tarifs__item .note {
+		font-size: 18px;
 	}
 }
 
@@ -1841,6 +2171,43 @@ html {
 }
 
 @media all and (min-width: 1024px) {
+	.tarifs__titlewrap {
+		position: relative;
+		text-align: right;
+	}
+	.tarifs__blocks {
+		display: flex;
+		margin-right: -30px;
+		align-items: flex-start;
+	}
+	.tarifs__item {
+		min-width: calc(50% - 30px);
+		max-width: calc(50% - 30px);
+		margin-right: 30px;
+		.top {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	.tarifs__item.full .top .right {
+		margin-bottom: 21px;
+	}
+	.tarifs__item .note {
+		text-align: left;
+		margin-right: 180px;
+	}
+	.tarifs__title {
+		font-size: 120px;
+		&:before {
+			position: absolute;
+			top: 43px;
+			left: -20px;
+			right: 614px;
+			content: '';
+			height: 60px;
+			background: url(../images/tarif_bg.png) 0 0 repeat-x;
+		}
+	}
 	.cookie-block__inner {
 		display: flex;
 		align-items: center;	
@@ -2618,6 +2985,16 @@ html {
 }
 
 @media all and (min-width: 1420px) {
+	.tarifs__title:before {
+		left: -54px;
+	}
+	.tarifs__item .blocks {
+		margin-top: 35px;
+	}
+	.tarifs__inner {
+		padding-left: 54px;
+		padding-right: 54px;
+	}
 	.faq__left img {
 		margin: 0;
 		max-width: 100%;
@@ -2903,6 +3280,13 @@ html {
 }
 
 @media all and (min-width: 1900px) {
+	.tarifs__inner {
+		padding-right: 215px;
+		padding-left: 215px;
+	}
+	.tarifs__title:before {
+		left: -215px;
+	}
 	.quadruple-block__inner .bottom .left {
 		flex-grow: 1;
 		max-width: none;
@@ -3183,5 +3567,11 @@ html {
 			min-width: 31.33%;
 			max-width: 31.33%;
 		}
+	}
+}
+
+@media all and (min-width: 3600px) {
+	header {
+		background-image: url(../images/header_bg4.jpeg);
 	}
 }
