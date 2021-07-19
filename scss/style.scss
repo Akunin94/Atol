@@ -1299,6 +1299,8 @@ html {
 		margin-bottom: 30px;
 		border-top: none;
 		position: relative;
+		display: flex;
+		flex-direction: column;
 		&:before {
 			position: absolute;
 			left: -1px;
@@ -1407,6 +1409,7 @@ html {
 			font-size: 16px;
 			font-weight: 700;
 			line-height: 20px;
+			margin-top: auto;
 			padding: 19px 10px 20px;
 			background: #000;
 			border-radius: 49px;
@@ -2178,7 +2181,6 @@ html {
 	.tarifs__blocks {
 		display: flex;
 		margin-right: -30px;
-		align-items: flex-start;
 	}
 	.tarifs__item {
 		min-width: calc(50% - 30px);
@@ -2989,7 +2991,7 @@ html {
 		left: -54px;
 	}
 	.tarifs__item .blocks {
-		margin-top: 35px;
+		margin-top: 20px;
 	}
 	.tarifs__inner {
 		padding-left: 54px;
