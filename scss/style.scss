@@ -1295,20 +1295,21 @@ html {
 	&__item {
 		border: 1px solid #BCBCBC;
 		padding: 51px 20px 30px;
-		border-radius: 0 0 25px 25px;
+		// border-radius: 0 0 25px 25px;
+		border-radius: 25px;
 		margin-bottom: 30px;
-		border-top: none;
+		// border-top: none;
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		&:before {
-			position: absolute;
-			left: -1px;
-			right: -1px;
-			top: 0;
-			content: '';
-			height: 20px;
-			background: url(../images/tarif_item1.png) 100% 0 repeat-x;
+			// position: absolute;
+			// left: -1px;
+			// right: -1px;
+			// top: 0;
+			// content: '';
+			// height: 20px;
+			// background: url(../images/tarif_item1.png) 100% 0 repeat-x;
 		}
 		&.full {
 			&:before {
@@ -2073,6 +2074,12 @@ html {
 	}
 	.tarifs__item .note {
 		font-size: 18px;
+	}
+}
+
+@media all and (min-width: 500px) {
+	header {
+		background-image: url(../images/header_bg1.png);
 	}
 }
 

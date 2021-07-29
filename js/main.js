@@ -59,6 +59,12 @@ $(document).on('click', function(event){
 $(document).on('click', '.popupform__close', hideForm1);
 $(document).on('click', '.integration__left .link', showForm1);
 
+$(document).on('click', '.integration__right a.link, .quadruple-block__inner .bottom .right .img a', function(){
+	$('.tarifs__item.full .popupform').addClass('active');
+	
+	return false;
+});
+
 function showForm1(){
 	$('html').addClass('showpopup showpopup2');
 	return false;
@@ -263,11 +269,29 @@ $(function(){
 		onLeaveBack: batch => gsap.to(batch, {translateX: '-400%', opacity: 0, duration: 0.1, stagger: 0}),
 	});
 
-
+	var partnersBl = $('.partners').clone();
 	gsap.from('.partners__item', {scrollTrigger: {
 		trigger: '.partners__inner',
-		toggleActions: 'restart pause restart pause'
-	},  left: '43%', top: '40%', duration: 1.2, opacity: '0'})
+		id: "trigger1",
+		toggleActions: 'restart pause restart pause',
+		invalidateOnResize: true,
+	},  left: '43%', top: '40%', duration: 1.2, opacity: '0'});
+
+	$(window).on('orientationchange', function(){
+		setTimeout( () => {
+			var $partners = $('.partners');
+			
+			$partners.after(partnersBl);
+			$partners.remove();
+
+			gsap.from('.partners__item', {scrollTrigger: {
+				trigger: '.partners__inner',
+				id: "trigger1",
+				toggleActions: 'restart pause restart pause',
+				invalidateOnResize: true,
+			},  left: '43%', top: '40%', duration: 1.2, opacity: '0'});
+		}, 50);
+	});
 
 
 	gsap.from('.steps__image', {scrollTrigger: {
